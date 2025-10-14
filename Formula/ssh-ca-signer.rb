@@ -5,21 +5,21 @@
 class SshCaSigner < Formula
   desc "Interactive CLI tool for signing SSH certificates using AWS Lambda SSH CA"
   homepage "https://github.com/qm-labs/ssh-ca-signer"
-  version "2.7.4"
+  version "2.7.6"
   license "Internal use only - Quantum Machines"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.4/ssh-ca-signer-releases_2.7.4_Darwin_x86_64.tar.gz"
-      sha256 "c526f3febf88768aa919abb580c745d94401476e2e2ad53092343f4d1c503a5a"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.6/ssh-ca-signer-releases_2.7.6_Darwin_x86_64.tar.gz"
+      sha256 "01a51c79a9f769ce5791f9eefe767089618ce5b3097f07f2c838195abc652c8f"
 
       def install
         bin.install "ssh-ca-signer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.4/ssh-ca-signer-releases_2.7.4_Darwin_arm64.tar.gz"
-      sha256 "a17e38e6050b8c159a0945a1b2f62a451811088d3ca4655e19d10eee6bc5f58b"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.6/ssh-ca-signer-releases_2.7.6_Darwin_arm64.tar.gz"
+      sha256 "796c320223aa2cab0f9bb5f7f440e9b6146a6eb9796cb1f4c14b3a287d1f293c"
 
       def install
         bin.install "ssh-ca-signer"
@@ -29,15 +29,15 @@ class SshCaSigner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.4/ssh-ca-signer-releases_2.7.4_Linux_x86_64.tar.gz"
-      sha256 "542fd8ea2347396727474ac8ca6bb0f8483975e0d29f590c536430c0560181d9"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.6/ssh-ca-signer-releases_2.7.6_Linux_x86_64.tar.gz"
+      sha256 "1abeaddc9e5c51e17e6508eb5d619b5628b8186e3ab9c2db73efc7425f6a8a5e"
       def install
         bin.install "ssh-ca-signer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.4/ssh-ca-signer-releases_2.7.4_Linux_arm64.tar.gz"
-      sha256 "5262b48da31415b86055146ea971b7863a701d31179bc4bad51d5f0864f4446e"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.7.6/ssh-ca-signer-releases_2.7.6_Linux_arm64.tar.gz"
+      sha256 "6b6e830a29e22416bdcc69ce60cb6d4a814675c1270201fe31bc1bcce4f68eb8"
       def install
         bin.install "ssh-ca-signer"
       end

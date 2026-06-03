@@ -5,23 +5,23 @@
 class SshCaSigner < Formula
   desc "Interactive CLI tool for signing SSH certificates using AWS Lambda SSH CA"
   homepage "https://github.com/qm-labs/ssh-ca-signer"
-  version "2.15.2"
+  version "2.16.1"
   license "Internal use only - Quantum Machines"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.15.2/ssh-ca-signer-releases_2.15.2_Darwin_x86_64.tar.gz"
-      sha256 "2cc910ed857adb742660a177f434bd0f390ccad7e2a6fb10a1f436026b3deedc"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.16.1/ssh-ca-signer-releases_2.16.1_Darwin_x86_64.tar.gz"
+      sha256 "ee2431c35327a043df29f7727777aea090f2aab7d5719f8b40927bc936175439"
 
-      def install
+      define_method(:install) do
         bin.install "ssh-ca-signer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.15.2/ssh-ca-signer-releases_2.15.2_Darwin_arm64.tar.gz"
-      sha256 "36dd933bda288be4b872f9fe79889ee6f178d233cf0068d7d7b5a94d01198b75"
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.16.1/ssh-ca-signer-releases_2.16.1_Darwin_arm64.tar.gz"
+      sha256 "5f86ea3cc0ead806a699fdbe82ea434130c4f0fc66fc2500d88144e002b7b778"
 
-      def install
+      define_method(:install) do
         bin.install "ssh-ca-signer"
       end
     end
@@ -29,16 +29,16 @@ class SshCaSigner < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.15.2/ssh-ca-signer-releases_2.15.2_Linux_x86_64.tar.gz"
-      sha256 "5d1f54eae1ad97c1a87730efae59fdddd5f0f81bee70e51063c90bbe664bed31"
-      def install
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.16.1/ssh-ca-signer-releases_2.16.1_Linux_x86_64.tar.gz"
+      sha256 "71e71ded41d29c4a33bf3a8a6939ae8db0b9c5b381e1288aecf83a7b9d0208c7"
+      define_method(:install) do
         bin.install "ssh-ca-signer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.15.2/ssh-ca-signer-releases_2.15.2_Linux_arm64.tar.gz"
-      sha256 "deb72ccbb24cbfc4d896b317f473e092877372de6fcc87f40d6d2ad7703b8605"
-      def install
+      url "https://github.com/qm-labs/ssh-ca-signer-releases/releases/download/v2.16.1/ssh-ca-signer-releases_2.16.1_Linux_arm64.tar.gz"
+      sha256 "6ad83ff05d2b55c80605268284e0e1274fdb3884f93ee07b31d68e629e0c3330"
+      define_method(:install) do
         bin.install "ssh-ca-signer"
       end
     end
